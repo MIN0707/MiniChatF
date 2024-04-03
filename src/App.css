@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+input {
+    height: 50px;
+    padding: 10px;
+    margin: 10px 20px 10px 20px;
+    line-height: normal;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    background: rgba(0, 0, 0, 0.42);
+    color: white;
+}
+
+button {
+    cursor: pointer;
+    height: 50px;
+    padding: 10px;
+    margin: 10px 20px 10px 20px;
+    line-height: normal;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    background: rgba(0, 0, 0, 0.42);
+    color: white;
+}
+
+.timestamp {
+    font-size: 0.8em;
+    color: #999;
+}
+
+.name_container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name_input{
+    width: 75%;
+    text-align: center;
+}
+
+.room_input{
+    width: 75%;
+    text-align: center;
+}
+
+.chat {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 0 20px 20px;
+}
+
+.invisible {
+    display: none;
+}
+
+.box {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    border-radius: 40px;
+    flex-direction: column-reverse;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-direction-column-reverse {
+    flex-direction: column-reverse;
+}
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+.flex-direction-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.width-75 {
+    width: 75%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4) url('./Images/sapphire.jpg');
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+.profile {
+    font-size: 40px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: grey;
+    border-radius: 5px;
+}
