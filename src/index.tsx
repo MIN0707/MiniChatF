@@ -5,8 +5,4 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 
-root.render(
-  <div className={'background'}>
-    <App />
-  </div>,
-);
+root.render(<App />);
