@@ -1,11 +1,11 @@
-import { StateType } from './types/types';
+import { MessageType, StateType } from './types/types';
 import Background from './components/Background';
 import { useReducer, useState } from 'react';
 import io from 'socket.io-client';
 import './App.css';
 import MessagesRow from './components/MessagesRow';
 
-const socket = io();
+const socket = io('http://localhost:3001');
 
 const initialState: StateType = {
   nickname: '',
@@ -22,9 +22,15 @@ function App(): JSX.Element {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [form, setForm] = useState('');
 
+  socket.on('receive', (data: MessageType) => {
+    console.log(data);
+    dispatch({ messages: [...state.messages!, data] });
+  });
+
   function onChatSubmit(event: React.KeyboardEvent<HTMLInputElement>) {
     if (event.key !== 'Enter') return;
     if (!state.input) return;
+    socket.emit('send', { text: state.input, sender: state.nickname });
     dispatch({ input: '' });
   }
 
